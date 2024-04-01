@@ -1,0 +1,4 @@
+data_capture/photos
+training_model/data
+training_model/graphs
+training_model/*.h5
