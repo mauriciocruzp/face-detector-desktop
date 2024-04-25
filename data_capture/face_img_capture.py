@@ -1,10 +1,10 @@
 import cv2
 import os
 
-photos_path = "data_capture/photos/unknown_photos"
+photos_path = "data_capture/photos/fer"
 photos_path_list = os.listdir(photos_path)
 
-detected_faces_path = "data_capture/photos/unknown_detected_faces"
+detected_faces_path = "data_capture/photos/rostro_fer"
 
 if not os.path.exists(detected_faces_path):
     os.makedirs(detected_faces_path)
@@ -31,7 +31,7 @@ for image_name in photos_path_list:
         face = cv2.resize(face, (150, 150), interpolation=cv2.INTER_CUBIC)
         # cv2.imshow("face", face)
         # cv2.waitKey(0)
-        cv2.imwrite(detected_faces_path + "/unknown_face_{}.jpg".format(count), face)
+        cv2.imwrite(detected_faces_path + "/rostro_fer_{}.jpg".format(count), face)
         count = count + 1
 
 cv2.destroyAllWindows()
